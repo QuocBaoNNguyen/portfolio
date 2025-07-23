@@ -2,35 +2,36 @@ import { useState } from "react";
 import { cn } from "@/lib/utils";
 
 const skills = [
-  // Frontend
-  { name: "HTML/CSS", level: 95, category: "frontend" },
-  { name: "JavaScript", level: 90, category: "frontend" },
-  { name: "React", level: 90, category: "frontend" },
-  { name: "TypeScript", level: 85, category: "frontend" },
-  { name: "Tailwind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 80, category: "frontend" },
+  // PM Tools
+  { name: "Jira", level: 95, category: "PM Tools" },
+  { name: "Confluence", level: 90, category: "PM Tools" },
+  { name: "Notion", level: 70, category: "PM Tools" },
+  { name: "Figma", level: 70, category: "PM Tools" },
 
-  // Backend
-  { name: "Node.js", level: 80, category: "backend" },
-  { name: "Express", level: 75, category: "backend" },
-  { name: "MongoDB", level: 70, category: "backend" },
-  { name: "PostgreSQL", level: 65, category: "backend" },
-  { name: "GraphQL", level: 60, category: "backend" },
+  // Technical
+  { name: "Git/GitHub", level: 95, category: "Technical" },
+  { name: "React & Tailwind", level: 90, category: "Technical" },
+  { name: "Python & Java", level: 80, category: "Technical" },
+  { name: "Cloud Infrastructure", level: 65, category: "Technical" },
 
-  // Tools
-  { name: "Git/GitHub", level: 90, category: "tools" },
-  { name: "Docker", level: 70, category: "tools" },
-  { name: "Figma", level: 85, category: "tools" },
-  { name: "VS Code", level: 95, category: "tools" },
+  // soft skills
+  { name: "Product Sense", level: 95, category: "soft skills" },
+  { name: "Market Research", level: 90, category: "soft skills" },
+  { name: "Stakeholder Communication", level: 90, category: "soft skills" },
+  { name: "Writing PRDs", level: 85, category: "soft skills" },
 ];
 
-const categories = ["all", "frontend", "backend", "tools"];
+const categories = ["all", "PM Tools", "Technical", "soft skills"];
 
 export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  const filteredSkills = skills.filter(
+  const filteredSkills = skills
+  .filter(
     (skill) => activeCategory === "all" || skill.category === activeCategory
+  )
+  .sort((a, b) =>
+    activeCategory === "all" ? b.level - a.level : 0
   );
   return (
     <section id="skills" className="py-24 px-4 relative bg-secondary/30">

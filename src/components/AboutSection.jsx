@@ -1,4 +1,4 @@
-import { Briefcase, Code, User } from "lucide-react";
+import {Monitor, Handshake, Lightbulb } from "lucide-react";
 
 export const AboutSection = () => {
   return (
@@ -12,20 +12,18 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">
-              Passionate Web Developer & Tech Creator
+              Passionate Product Manager & Web Developer
             </h3>
 
             <p className="text-muted-foreground">
-              With over 5 years of experience in web development, I specialize
-              in creating responsive, accessible, and performant web
-              applications using modern technologies.
+            I bring product ideas to life by bridging users, design, and 
+            engineering. With a Math-CS background, I thrive on turning 
+            insights into intuitive, high-impact solutions.
             </p>
 
             <p className="text-muted-foreground">
-              I'm passionate about creating elegant solutions to complex
-              problems, and I'm constantly learning new technologies and
-              techniques to stay at the forefront of the ever-evolving web
-              landscape.
+            As a developer, I build fast, accessible websites with React and 
+            Tailwind, always focused on clean UX and continuous learning.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
@@ -47,42 +45,43 @@ export const AboutSection = () => {
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
-                  <Code className="h-6 w-6 text-primary" />
+                  <Lightbulb className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                <h4 className="font-semibold text-lg">Product Management</h4>
                   <p className="text-muted-foreground">
-                    Creating responsive websites and web applications with
-                    modern frameworks.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <User className="h-6 w-6 text-primary" />
-                </div>
-                <div className="text-left">
-                  <h4 className="font-semibold text-lg">UI/UX Design</h4>
-                  <p className="text-muted-foreground">
-                    Designing intuitive user interfaces and seamless user
-                    experiences.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="gradient-border p-6 card-hover">
-              <div className="flex items-start gap-4">
-                <div className="p-3 rounded-full bg-primary/10">
-                  <Briefcase className="h-6 w-6 text-primary" />
-                </div>
+                  Leading products from idea to launch with user insight,
+                  agile methods, and communication.
 
+
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Monitor className="h-6 w-6 text-primary" />
+                </div>
                 <div className="text-left">
-                  <h4 className="font-semibold text-lg">Project Management</h4>
+                <h4 className="font-semibold text-lg"> Web Development</h4>
                   <p className="text-muted-foreground">
-                    Leading projects from conception to completion with agile
-                    methodologies.
+                  Building responsive, accessible web apps using modern frameworks 
+                  like React and Tailwind.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Handshake className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                <h4 className="font-semibold text-lg"> Leadership</h4>
+                  <p className="text-muted-foreground">
+                   Creating an inclusive space where teammates feel heard, 
+                   and empowered to share ideas.
                   </p>
                 </div>
               </div>
