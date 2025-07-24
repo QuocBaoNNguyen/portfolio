@@ -1,9 +1,8 @@
-import {Monitor, Handshake, Lightbulb } from "lucide-react";
+import { Monitor, Handshake, Lightbulb } from "lucide-react";
 
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
-      {" "}
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           About <span className="text-primary"> Me</span>
@@ -11,29 +10,30 @@ export const AboutSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-semibold">
-              Passionate Product Manager & Web Developer
+            <h3 className="text-2xl font-semibold text-foreground">
+                <span> Passionate Product Manager & Web Developer</span>
             </h3>
 
             <p className="text-muted-foreground">
-            I bring product ideas to life by bridging users, design, and 
-            engineering. With a Math-CS background, I thrive on turning 
-            insights into intuitive, high-impact solutions.
+              I bring product ideas to life by <span className="text-primary font-semibold">bridging</span> users, design, and 
+              engineering. With a <span className="text-primary font-semibold">Math-CS</span> background, I thrive on turning 
+              insights into intuitive, high-impact <span className="text-primary font-semibold">solutions</span>.
             </p>
 
             <p className="text-muted-foreground">
-            As a developer, I build fast, accessible websites with React and 
-            Tailwind, always focused on clean UX and continuous learning.
+              As a developer, I build fast, accessible websites with <span className="text-primary font-semibold">React and Tailwind</span>, 
+              always focused on clean UX and continuous learning.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
               <a href="#contact" className="cosmic-button">
-                {" "}
                 Get In Touch
               </a>
 
               <a
-                href=""
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
                 Download CV
@@ -41,6 +41,7 @@ export const AboutSection = () => {
             </div>
           </div>
 
+          {/* Right Side Cards */}
           <div className="grid grid-cols-1 gap-6">
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
@@ -48,40 +49,40 @@ export const AboutSection = () => {
                   <Lightbulb className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                <h4 className="font-semibold text-lg">Product Management</h4>
+                  <h4 className="font-semibold text-lg">Product Management</h4>
                   <p className="text-muted-foreground">
-                  Leading products from idea to launch with user insight,
-                  agile methods, and communication.
-
-
+                    Leading products from idea to launch with user insight,
+                    agile methods, and communication.
                   </p>
                 </div>
               </div>
             </div>
+
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Monitor className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <h4 className="font-semibold text-lg">Web Development</h4>
                   <p className="text-muted-foreground">
-                  Building responsive, accessible web apps using modern frameworks 
-                  like React and Tailwind.
+                    Building responsive, accessible web apps using modern frameworks 
+                    like React and Tailwind.
                   </p>
                 </div>
               </div>
             </div>
+
             <div className="gradient-border p-6 card-hover">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Handshake className="h-6 w-6 text-primary" />
                 </div>
                 <div className="text-left">
-                <h4 className="font-semibold text-lg"> Leadership</h4>
+                  <h4 className="font-semibold text-lg">Leadership</h4>
                   <p className="text-muted-foreground">
-                   Creating an inclusive space where teammates feel heard, 
-                   and empowered to share ideas.
+                    Creating an inclusive space where teammates feel heard, 
+                    and empowered to share ideas.
                   </p>
                 </div>
               </div>
