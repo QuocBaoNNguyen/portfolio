@@ -10,16 +10,16 @@ const projects = [
     demoUrl: "https://www.ojtintstudio.com",
     githubUrl: "https://github.com/ssarvesh20000/OJTS",
   },
-   // {
-  //   id: 2,
-  //   title: "Orbit Analytics Dashboard",
-  //   description:
-  //     "Interactive analytics dashboard with data visualization and filtering capabilities.",
-  //   image: "/projects/project2.png",
-  //   tags: ["TypeScript", "D3.js", "Next.js"],
-  //   demoUrl: "https://www.amazon.com", // ✅ Changed to amazon.com
-  //   githubUrl: "https://www.ebay.com", // ✅ Changed to ebay.com
-  // },
+   {
+    id: 2,
+    title: "Competitive Analysis Mapper",
+    description:
+      "AI tool for PMs to compare competitors, analyze features, and export a clean competitive matrix",
+    image: "/projects/productlens.png",
+    tags: ["OpenAI", "Next.js", "Vercel"],
+    demoUrl: "https://product-lens-ai.vercel.app/", 
+    githubUrl: "https://github.com/QuocBaoNNguyen/compass-competitor-mapper", 
+  },
   // {
   //   id: 3,
   //   title: "E-commerce Platform",
@@ -48,65 +48,63 @@ export const ProjectsSection = () => {
         </p>
 
         {/* Dynamic layout */}
-        <div
+                <div
           className={
             isSingleProject
               ? "flex justify-center"
-              : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+              : "flex flex-wrap justify-center gap-8"
           }
         >
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover max-w-sm w-full"
-            >
-              <div className="h-48 overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
 
-              <div className="p-6">
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {project.description}
-                </p>
-                <div className="flex justify-between items-center">
-                  <div className="flex space-x-3">
-                    <a
-                      href={project.demoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <ExternalLink size={20} />
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    >
-                      <Github size={20} />
-                    </a>
+                        {projects.map((project) => (
+                <a
+                  key={project.id}
+                  href={project.demoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-card rounded-lg overflow-hidden shadow-xs card-hover max-w-sm w-full block"
+                >
+                  <div className="h-48 overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
-                </div>
-              </div>
-            </div>
-          ))}
+
+                  <div className="p-6">
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.tags.map((tag, index) => (
+                        <span
+                          key={index}
+                          className="px-2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+
+                    <h3 className="text-xl font-semibold mb-1">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm mb-4">
+                      {project.description}
+                    </p>
+                    <div className="flex justify-between items-center">
+                      <div className="flex space-x-3">
+                        <ExternalLink size={20} />
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()} // prevent card click from firing
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        >
+                          <Github size={20} />
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              ))}
         </div>
       </div>
     </section>
